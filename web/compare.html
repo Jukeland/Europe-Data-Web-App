@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web application for the visualization of demographic and economic data of European countries, annual comparison of data for all countries">
+    
+    <title>Yearly Comparison</title>
+    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/compare.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="javascript/compare.js" defer></script>
+    
+</head>
+<body>
+
+<div class="dashboard_container" role="main">
+    <div class="controls">
+        
+        <button class="back_button" onclick="window.location.href='index.html'">← Back to Map</button>
+        
+        <h1 hidden>Placeholder</h1>
+        <h2>Select a Year to Compare</h2>
+
+        <select id="yearSelect" class="year_input">
+            <option value="">Loading years...</option>
+        </select>
+
+        <select id="sortSelect" class="year_input sort_input">
+            <option value="value_desc">Value (High to Low)</option>
+            <option value="value_asc">Value (Low to High)</option>
+            <option value="alpha_asc">Name (A-Z)</option>
+            <option value="alpha_desc">Name (Z-A)</option>
+        </select>
+    </div>
+
+    <div class="chart_container">
+        <canvas id="populationChart"></canvas>
+    </div>
+    <div class="chart_container">
+        <canvas id="inflationChart"></canvas>
+    </div>
+    <div class="chart_container">
+        <canvas id="migrationChart"></canvas>
+    </div>
+    
+</div>
+
+
+</body>
+</html>

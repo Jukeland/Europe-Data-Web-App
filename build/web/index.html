@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Europe Population</title>
+    <meta name="description" content="Web application for the visualization of demographic and economic data of European countries">
+    
+    <link rel="preconnect" href="https://a.basemaps.cartocdn.com">
+    <link rel="preconnect" href="https://b.basemaps.cartocdn.com">
+    <link rel="preconnect" href="https://ajax.googleapis.com">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"> 
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="javascript/script.js" defer></script>
+</head>
+<body onload="startApp()">
+    
+    <h1 hidden>placeholder</h1>
+    <button id="compare_button" class="compare" onclick="window.location.href='compare.html'">Compare Data</button>
+    <button id="login_button" class="login">Login</button>
+    <div id="map" role="main"></div>
+    
+</body>
+</html>

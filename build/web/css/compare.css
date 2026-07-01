@@ -1,0 +1,96 @@
+.dashboard_container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.controls { 
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+.controls h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.year_input { 
+    padding: 11px; 
+    font-size: 16px; 
+    border-radius: 8px; 
+    border: 2px solid #ddd; 
+    width: 180px; /* Merged from your old HTML style block */
+    text-align: center;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+/* Replaced the inline style from the sort dropdown */
+.year_input.sort_input {
+    margin-left: 10px;
+}
+
+.year_input:focus {
+    outline: none;
+    border-color: #735bf2;
+}
+
+/* Included from your old HTML style block just in case you use it */
+.fetch_btn { 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    background-color: #735bf2; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.chart_container { 
+    margin-bottom: 50px; 
+    background: #ffffff; 
+    padding: 25px; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    height: 850px; /* Merged from your old HTML style block */
+}
+
+.view_details_btn {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); 
+    color: #ffffff !important; 
+    border: none;
+    padding: 12px 20px; 
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    text-align: center;
+    border-radius: 8px; 
+    box-shadow: 0 8px 16px rgba(124, 58, 237, 0.3); 
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+
+.view_details_btn:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 12px 20px rgba(124, 58, 237, 0.4); 
+    background: linear-gradient(135deg, #5a54e3 0%, #8b4bf0 100%); 
+}
+
+.view_details_btn:active {
+    transform: translateY(1px); 
+    box-shadow: 0 4px 8px rgba(124, 58, 237, 0.3); 
+}
+
+.scroll_wrapper {
+    overflow-x: auto; 
+    overflow-y: hidden;
+    padding-bottom: 15px; 
+}
+
+.scroll_wrapper canvas {
+    min-width: 1500px; 
+    max-height: 400px; 
+}

@@ -1,0 +1,26 @@
+<div id="login_overlay" class="login_overlay">
+    
+    <div class="login_card">
+        
+        <button id="close_button" class="close_button">&times;</button>
+        <h2 class="login_title">Admin Login</h2>
+        
+        <div id="login_message" style="display: none; color: #dc3545; font-weight: bold; margin-bottom: 15px; text-align: center;"></div>
+        
+        <form id="login_form" onsubmit="return false">
+            <div class="input_group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="input_group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit" onclick="loginPOST()" class="action_btn" style="margin-top: 20px;">Login</button>
+        </form>
+        
+    </div>
+    
+</div>

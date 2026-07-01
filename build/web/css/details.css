@@ -1,0 +1,112 @@
+body, html {
+    margin: 0; padding: 0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+.dashboard_container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+.back_button {
+    background: white; border: 1px solid #cbd5e1;
+    padding: 8px 16px; border-radius: 8px;
+    cursor: pointer; font-weight: 600; color: #475569;
+    transition: 0.2s; margin-bottom: 20px;
+}
+
+.back_button:hover { background: #f1f5f9; color: #0f172a; }
+
+h1 { margin: 0; font-size: 2.5rem; color: #0f172a; }
+p { color: #64748b; font-size: 1.1rem; margin-top: 5px; }
+
+.charts_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 800px) {
+    .charts_grid { grid-template-columns: 1fr 1fr; }
+}
+
+.chart_card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.chart_card h3 {
+    margin: 0 0 20px 0;
+    color: #334155;
+    font-size: 1.2rem;
+}
+
+/* =========================================
+   RANGE CONTROLS 
+   ========================================= */
+.range_controls {
+    display: flex; 
+    flex-direction: row;        
+    align-items: flex-end;      
+    justify-content: space-between; 
+    gap: 20px; 
+    background: #f8f9fa; 
+    padding: 20px; 
+    border-radius: 8px;
+    width: 100%;                
+    box-sizing: border-box;     
+}
+
+.range_group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;                    
+}
+
+.range_label {
+    font-weight: 600; 
+    margin-bottom: 8px; 
+    font-size: 14px;
+    color: #374151;
+}
+
+.range_select {
+    width: 100%;                
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+}
+
+.range_controls .action_btn {
+    width: auto;                
+    flex: 1;                    
+    margin: 0;
+    height: 40px;               
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.range_controls .reset_btn {
+    background: #6b7280; 
+    color: white; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: 600;
+}
+
+.range_controls .reset_btn:hover {
+    background: #4b5563; 
+}

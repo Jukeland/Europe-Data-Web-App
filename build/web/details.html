@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web application for the visualization of demographic and economic data of European countries, more detailed data about each country">
+    
+    <title>Country Analytics</title>
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="javascript/details.js" defer></script>
+    
+</head>
+<body>
+
+    <div class="dashboard_container" role="main">
+        <header>
+            <button class="back_button" onclick="window.location.href='index.html'">← Back to Map</button>
+            <h1 id="country_name">Placeholder</h1>
+            <h2 hidden>Placeholder</h2>
+            <p>Demographic and Economic data by year</p>
+        </header>
+
+        <div class="range_controls">
+            <div class="range_group">
+                <label for="startYear" class="range_label">From Year</label>
+                <select id="startYear" class="year_input range_select"></select>
+            </div>
+
+            <div class="range_group">
+                <label for="endYear" class="range_label">To Year</label>
+                <select id="endYear" class="year_input range_select"></select>
+            </div>
+
+            <button id="applyRangeBtn" class="action_btn apply_btn">Apply Filter</button>
+            <button id="resetDecadesBtn" class="action_btn reset_btn">Show Decades</button>
+        </div>
+        
+        <div class="charts_grid">
+            <div class="chart_card">
+                <h3>Population Change</h3>
+                <canvas id="population_chart"></canvas>
+            </div>
+
+            <div class="chart_card">
+                <h3>Gender Distribution (%)</h3>
+                <canvas id="gender_chart"></canvas>
+            </div>
+            
+            <div class="chart_card">
+                <h3>Inflation Rate Of Change</h3>
+                <canvas id="inflation_chart"></canvas>
+            </div>
+            
+            <div class="chart_card">
+                <h3>Migration</h3>
+                <canvas id="migration_chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

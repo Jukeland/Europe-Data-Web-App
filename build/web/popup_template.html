@@ -1,0 +1,37 @@
+<div class="country_card">
+    
+    <div class="card_header">
+        <img src="{{FLAG_URL}}" alt="Flag" class="flag_img">
+        <h2>{{COUNTRY_NAME}}</h2>
+    </div>
+    
+    <div class="card_content">
+        <div class="stat_grid">
+            <div class="stat_item">
+                <div class="stat_label">Population</div>
+                <div class="stat_value">{{POPULATION}}</div>
+            </div>
+            <div class="stat_item">
+                <div class="stat_label">Currency</div>
+                <div class="stat_value">{{CURRENCY}}</div>
+            </div>
+        </div>
+
+        <div class="exchange_box">
+            <span class="exchange_label">Rate (1 EUR)</span>
+            <span class="exchange_value">{{EXCHANGE_RATE}}</span>
+        </div>
+
+        <div class="fun_fact_section">
+            <h4>Fun Fact</h4>
+            <p>{{FUN_FACT}}</p>
+        </div>
+
+        <div class="card_action">
+            <button class="action_btn" onclick="window.location.href='details.html?country={{COUNTRY_URL}}'">
+                View Details
+            </button>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <title>Admin Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/admin.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+        <script src="javascript/admin.js" defer></script>
+        
+    </head>
+    
+    <body>
+        <form id="csv_form" onsubmit="submitForm(event)">
+            
+            <label for="male_population_csv">Choose a csv file for the male population data</label>
+            <br>
+            <input type="file" id="male_population_csv">
+            <br>
+            <br>
+
+            <label for="female_population_csv">Choose a csv file for the female population data</label>
+            <br>
+            <input type="file" id="female_population_csv">
+            <br>
+            <br>            
+            
+            <label for="inflation_csv">Choose a csv file for the inflation data</label>
+            <br>
+            <input type="file" id="inflation_csv">
+            <br>
+            <br>
+            
+            <label for="migration_csv">Choose a csv file for the migration data</label>
+            <br>
+            <input type="file" id="migration_csv">
+            <br>
+            <br>
+            <div id="status_message" class="status-message">
+                <strong id="status_title"></strong>
+                <div id="report_container"></div>
+            </div>
+            <input type="submit" value="Submit">
+            
+            <button type="button" class="logout-btn" onclick="logout()">Logout</button>
+            
+        </form>
+    </body>
+    
+</html>
