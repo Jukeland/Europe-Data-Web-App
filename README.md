@@ -1,4 +1,4 @@
-# Run the project
+# To run the project
 
 1) cd <absolute_path_to>\Project_thesis
 2) docker-compose up --build -d
