@@ -1,0 +1,45 @@
+services:
+  # --- 1. The MySQL Database Service ---
+  mysql-db:
+    image: mysql:9.7
+    container_name: europe_data_db
+    restart: always
+    command: --sql_mode="" --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: world_population
+    ports:
+      - "3307:3306"
+    volumes:
+      # keep the database data persistent across container restarts
+      - db_data:/var/lib/mysql
+
+  # --- 2. The Java Web App Service ---
+  web-app:
+    build: .
+    container_name: europe_data_app
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      # start the database service before the web app
+      - mysql-db
+    volumes:
+      # keep uploaded files persistent across container restarts
+      - app_uploads:/usr/local/tomcat/app-data/uploads 
+
+  # --- 3. The phpMyAdmin Service ---
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: europe_data_pma
+    restart: always
+    ports:
+      - "8081:80" # using 8081 as Tomcat is already using 8080
+    environment:
+      # connect to the MySQL database service defined above
+      PMA_HOST: mysql-db
+      PMA_PORT: 3306
+
+volumes:
+  db_data:
+  app_uploads:
